@@ -16,57 +16,5 @@ def submit(request):
     return HttpResponse(count)
 
 
-def SearchingAlgos(request):
-    return HttpResponse("Searching Algorithms")
-
-
-def SortingAlgos(request):
-    return HttpResponse("Sorting Algorithms")
-
-
-def GreedyAlgos(request):
-    return HttpResponse("Greedy Algorithms")
-
-
-def DynamicProgramming(request):
-    return HttpResponse("Dynamic programming")
-
-
-def PatternSearchingAlgos(request):
-    return HttpResponse("Pattern Searching Algorithms")
-
-
-def Backtracking(request):
-    return HttpResponse("Back Tracking Algorithms")
-
-
-def DivideAndConquer(request):
-    return HttpResponse("Divide and Conquer Problems")
-
-
-def GeometricAlgos(request):
-    return HttpResponse("Geometric Algorithms")
-
-
-def MathematicalAlgos(request):
-    return HttpResponse("Mathematical Algorithms")
-
-
-def BitAlgos(request):
-    return HttpResponse("Bit Algorithms")
-
-def GraphAlgos(request):
-    return HttpResponse("Graph Algorithms")
-
-
-def RandomizedAlgos(request):
-    return HttpResponse("Randomized Algorithms")
-
-
-def BranchAndBound(request):
-    return HttpResponse("Branch and Bound problems")
-
-
-
 
 
