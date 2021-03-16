@@ -19,5 +19,19 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name = 'index')
+    path('', views.index, name = 'index'),
+    path('submit' , views.submit , name = 'submit'),
+    path('geometry' , views.GeometricAlgos , name = 'geometry'),
+    path('maths' , views.MathematicalAlgos , name = 'maths'),
+    path('backtrack' , views.Backtracking , name = 'backtrack'),
+    path('bit' , views.BitAlgos , name = 'bit'),
+    path('branchandbound' , views.BranchAndBound , name = 'branchbound'),
+    path('greedy' , views.GreedyAlgos , name = 'greedy'),
+    path('sort' , views.SortingAlgos , name = 'sorting'),
+    path('search' , views.SearchingAlgos , name = 'searching'),
+    path('divcon' , views.DivideAndConquer , name = 'divcon'),
+    path('pattern' , views.PatternSearchingAlgos , name = 'pattern'),
+    path('dynamic' , views.DynamicProgramming , name = 'dynamic'),
+    path('randomised' , views.RandomizedAlgos , name = 'randomised'),
+    path('graph' , views.GraphAlgos , name = 'graph'),
 ]
