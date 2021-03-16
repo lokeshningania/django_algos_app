@@ -19,6 +19,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('countdown' , views.countdown , name = 'countdown'),
     path('', views.index, name = 'index'),
     path('submit' , views.submit , name = 'submit'),
     path('geometry' , views.GeometricAlgos , name = 'geometry'),

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/countdown.css' %}">
 </head>
 <body>
     
@@ -42,6 +44,6 @@
 
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>    
-    <script type='text/javascript' src="countdown.js"></script>
+    <script type='text/javascript' src="{% static 'js/countdown.js' %}"></script>
 </body>
 </html>
