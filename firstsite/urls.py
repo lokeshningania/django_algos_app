@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path , include
 from . import views
 
 urlpatterns = [
@@ -29,7 +29,7 @@ urlpatterns = [
     path('branchandbound' , views.BranchAndBound , name = 'branchbound'),
     path('greedy' , views.GreedyAlgos , name = 'greedy'),
     path('sort' , views.SortingAlgos , name = 'sorting'),
-    path('search' , views.SearchingAlgos , name = 'searching'),
+    path('search/' , include('searchingalgos.urls')),
     path('divcon' , views.DivideAndConquer , name = 'divcon'),
     path('pattern' , views.PatternSearchingAlgos , name = 'pattern'),
     path('dynamic' , views.DynamicProgramming , name = 'dynamic'),
