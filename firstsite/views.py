@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("Home Page")
+    return render(request , 'home.html')
     
 def countdown(request):
     return render(request , 'countdown.html')
