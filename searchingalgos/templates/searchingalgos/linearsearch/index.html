@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/linearsearch.css' %}">
+</head>
+<body>
+    <div class="details">
+        <h1>Linear Search</h1>
+        <p>Worst case complexity of the linear search is O(n)</p>
+        <p>If the searched value is found at last index that means we have to iterate it to number of elements in the array.</p>
+        <p>Best Case complexity is O(1)</p>
+        <p>If value is found at first position then it is the best case scenario.</p>
+    </div>
+    <form action='linear/performlinearsearch' method="GET">
+        <textarea name="array" id="array" cols="30" rows="4"></textarea><br>
+        <button type="submit">Enter Array</button>
+    </form>
+</body>
+</html>
