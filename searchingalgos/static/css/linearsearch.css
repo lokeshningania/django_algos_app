@@ -1,3 +1,17 @@
 body{
     background-color: brown;
 }
+.details{
+    text-align: center;
+}
+
+#submit{
+    color: white;
+    border-style: none;
+    background-color: green;
+    width: 10rem;
+}
+
+#array{
+    font-size: large;
+}

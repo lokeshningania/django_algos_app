@@ -15,10 +15,13 @@
         <p>If the searched value is found at last index that means we have to iterate it to number of elements in the array.</p>
         <p>Best Case complexity is O(1)</p>
         <p>If value is found at first position then it is the best case scenario.</p>
+        <h1 id="printarray"> </h1>
+    
+        <form action='linear/performlinearsearch' method="GET">
+            <textarea name="array" id="array" cols="20" rows="1" oninput="printarray(this.value)"></textarea><br>
+            <button id="submit" type="submit">Enter Array</button>
+        </form>
     </div>
-    <form action='linear/performlinearsearch' method="GET">
-        <textarea name="array" id="array" cols="30" rows="4"></textarea><br>
-        <button type="submit">Enter Array</button>
-    </form>
+    <script src="{% static '/js/linearsearch.js' %}"></script>
 </body>
 </html>
