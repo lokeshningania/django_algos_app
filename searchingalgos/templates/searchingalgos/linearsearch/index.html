@@ -18,11 +18,11 @@
         <h1 id="printarray"> </h1>
     
         <form action='linear/performlinearsearch' method="GET">
-            
-            <textarea name="array" id="array" cols="20" rows="1" oninput="printarray(this.value)"></textarea><br>
-            <button id="submit" type="submit">Enter Array</button>
+            <input type="number" class='input' name="searchval" id="searchval"><br>
+            <button id="submit" type="submit">Enter Number you want to search</button>
         </form>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="{% static '/js/linearsearch.js' %}"></script>
 </body>
 </html>
