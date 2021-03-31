@@ -9,7 +9,16 @@
     <link rel="stylesheet" href="{% static '/css/linearsearch.css' %}">
 </head>
 <body>
-    <h1>Searching the number => {{searchval}}</h1>
-    <p>{{position}}</p>
+    <div class="details">
+        <h1>Searching the number => {{searchval}}</h1>
+        
+        <p hidden id="index">{{index}}</p>
+        <div id="main"></div>
+        <h1 id="elementpositionmsg" >{{position}}</h1>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="{% static '/js/linearsearchresult.js' %}"></script>
 </body>
 </html>

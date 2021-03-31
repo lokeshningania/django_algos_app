@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="{% static '/css/linearsearch.css' %}">
 </head>
 <body>
+    <script>
+        function manage(val) {
+            var bt = document.getElementById('submitbtn');
+            var l = val.length;
+            if (l >= 1) {
+                bt.disabled = false;
+            }
+            else {
+                bt.disabled = true;
+            }
+
+        }
+        
+
+    </script>
+
     <div class="details">
         <h1>Linear Search</h1>
         <p>Worst case complexity of the linear search is O(n)</p>
@@ -17,9 +33,9 @@
         <p>If value is found at first position then it is the best case scenario.</p>
         <h1 id="printarray"> </h1>
     
-        <form action='linear/performlinearsearch' method="GET">
-            <input type="number" class='input' name="searchval" id="searchval"><br>
-            <button id="submit" type="submit">Enter Number you want to search</button>
+        <form onkeypress="return event.keyCode != 13;" action='linear/performlinearsearch' method="GET">
+            <input type="number" class='input' name="searchval" id="searchval"  onkeyup="manage(this.value)"><br>
+            <button id="submitbtn" type="submit" disabled >Enter Number you want to search</button>
         </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
