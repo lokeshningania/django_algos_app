@@ -63,3 +63,11 @@ html{
 #array{
     font-size: large;
 }
+
+.emojidiv{
+    text-align: center;
+}
+
+.emoji{
+    font-size: 200px;
+}

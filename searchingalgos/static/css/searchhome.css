@@ -1,0 +1,42 @@
+body{
+    
+    background-color: rgba(34,193,195,1);
+}
+html{
+    font-size: 16px;
+   
+}
+
+.linkcard{
+    padding: 20px;
+    border: 0.5rem solid rgba(253,187,45,1);
+    background-color:rgba(34,193,195,1);
+    height: 50px;
+    width: 90%;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.links{
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+.linksdiv {
+    text-align: center;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    
+    
+  }
+
+  .container{
+    text-align: center;
+    height: 90vh;
+    
+    
+}

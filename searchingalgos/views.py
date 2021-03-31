@@ -10,6 +10,9 @@ def index(request):
 def linearsearch(request):
     return render(request , 'searchingalgos/linearsearch/index.html')
 
+def binarysearch(request):
+    return render(request,'searchingalgos/binarysearch/index.html')
+
 
 
 def performlinearsearch(request):
