@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/binarysearch.css' %}">
+</head>
+<body>
+    <div class="details">
+        <h1>Searching the number => {{binarysearchval}}</h1>
+        <p hidden id="binarysearchval">{{binarysearchval}}</p>
+        
+        
+        <div id="main"></div>
+        <h1>{{index}}</h1>
+        <div class="emojidiv">
+            <p class="emoji" id="emoji"></p>
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="{% static '/js/binarysearch/binarysearchresult.js' %}"></script>
+</body>
+</html>

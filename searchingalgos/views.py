@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+
 def index(request):
     return render(request , 'searchingalgos/index.html')
 
@@ -12,6 +13,47 @@ def linearsearch(request):
 
 def binarysearch(request):
     return render(request,'searchingalgos/binarysearch/index.html')
+
+
+
+
+
+def performbinarysearch(request):
+    arr = [1 , 4, 8 , 9 , 14 , 19 , 23 , 26 ,28 , 34 , 40 , 44 , 47 , 56 , 62 , 65 , 89 , 96 ]
+    x = request.GET.get('binarysearchval' , 'default')
+    x = int(x)
+    resultlist = []
+    result = binarySearch(arr, 0, len(arr)-1, x)
+    params = {'binarysearchval': x , 'index' : result}
+    return render(request , 'searchingalgos/binarysearch/result.html' , params)
+
+
+# Returns index of x in arr if present, else -1
+def binarySearch (arr, l, r, x):
+
+	# Check base case
+	if r >= l:
+
+		mid = l + (r - 1) // 2
+
+		# If element is present at the middle itself
+		if arr[mid] == x:
+			return mid
+		
+		# If element is smaller than mid, then it
+		# can only be present in left subarray
+		elif arr[mid] > x:
+			return binarySearch(arr, l, mid-1, x)
+
+		# Else the element can only be present
+		# in right subarray
+		else:
+			return binarySearch(arr, mid + 1, r, x)
+
+	else:
+		# Element is not present in the array
+		return -1
+
 
 
 

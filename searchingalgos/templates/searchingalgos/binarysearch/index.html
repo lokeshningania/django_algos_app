@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Linear Search</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/binarysearch.css' %}">
 </head>
 <body>
-    <h1>Binary Search</h1>
+    <script>
+        function manage(val) {
+            var bt = document.getElementById('submitbtn');
+            var l = val.length;
+            if (l >= 1) {
+                bt.disabled = false;
+            }
+            else {
+                bt.disabled = true;
+            }
+
+        }
+        
+
+    </script>
+
+    <div class="details">
+        <h1>Binary Search</h1>
+        <p>Worst case complexity of the linear search is O(log n)</p>
+        <p>If the searched value is found at last index that means we have to iterate it to number of elements in the array.</p>
+        <p>Best Case complexity is O(1)</p>
+        <p>If value is found at first position then it is the best case scenario.</p>
+        <h1 id="printarray"> </h1>
+    
+        <form onkeypress="return event.keyCode != 13;" action='binary/performbinarysearch' method="GET">
+            <input type="number" class='input' name="binarysearchval" id="searchval"  onkeyup="manage(this.value)"><br>
+            <button id="submitbtn" type="submit" disabled >Enter Number you want to search</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="{% static '/js/binarysearch/binarysearch.js' %}"></script>
 </body>
 </html>
