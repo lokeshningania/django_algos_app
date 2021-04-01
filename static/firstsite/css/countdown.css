@@ -7,7 +7,7 @@ h3{
 }
 
 body{
-    background-image: url('% static "images/3.jpg" %');
+    background-image: url('/static/firstsite/images/3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
