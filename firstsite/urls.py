@@ -23,6 +23,7 @@ urlpatterns = [
     path('' , views.home , name = 'home'),
     path('algos', views.algos, name = 'algos'),
     path('submit' , views.submit , name = 'submit'),
+    path('ds/' , include('datastructures.urls')),
     path('geometry/' , include('geometricalgos.urls')),
     path('maths/' , include('mathematicalalgos.urls')),
     path('backtrack/' , include('backtracking.urls')),
