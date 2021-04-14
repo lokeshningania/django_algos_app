@@ -40,13 +40,13 @@ body{
 
 }
 
-.cardimage {
-    height: 300px;
-    width: 100%;
-    border-top: brown solid 2px;
-    border-bottom: brown solid 2px;
+.cards:hover{
     
+    box-shadow: inset 0 0 0 15px #36546d;
+    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red  ) 1;
+
 }
+
 
 .linksdiv {
     display: grid;

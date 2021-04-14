@@ -22,38 +22,55 @@ def performbinarysearch(request):
     arr = [1 , 4, 8 , 9 , 14 , 19 , 23 , 26 ,28 , 34 , 40 , 44 , 47 , 56 , 62 , 65 , 89 , 96 ]
     x = request.GET.get('binarysearchval' , 'default')
     x = int(x)
-    resultlist = []
-    result = binarySearch(arr, 0, len(arr)-1, x)
-    params = {'binarysearchval': x , 'index' : result}
+    result = binarySearch(arr, x)
+    params = { 'list' : result['list'] , 'index' : result['mid'] , 'binarysearchvalue': x}
+    
     return render(request , 'searchingalgos/binarysearch/result.html' , params)
 
 
-# Returns index of x in arr if present, else -1
-def binarySearch (arr, l, r, x):
-
-	# Check base case
-	if r >= l:
-
-		mid = l + (r - 1) // 2
-
-		# If element is present at the middle itself
-		if arr[mid] == x:
-			return mid
-		
-		# If element is smaller than mid, then it
-		# can only be present in left subarray
-		elif arr[mid] > x:
-			return binarySearch(arr, l, mid-1, x)
-
-		# Else the element can only be present
-		# in right subarray
-		else:
-			return binarySearch(arr, mid + 1, r, x)
-
-	else:
-		# Element is not present in the array
-		return -1
-
+def binarySearch(arr,element):
+    liste = []
+    low = 0
+    high = len(arr)-1
+     
+    # initialize the 'if_found' variable with False.
+    if_found = False
+     
+    # run the loop until if_found becomes True and
+    # lower index is greater and higher index.
+    while( low<=high and not if_found):
+        # find the index of middle element
+        mid = (low + high)//2
+        liste.append([low , mid , high ])
+         
+        #If the middle element is the element we are looking for,
+        # return the index of middle element  
+        if arr[mid] == element :
+            if_found = True
+         
+        else:
+        # if the element is less than the middle element,
+        # look for the element in the first part.
+            if element < arr[mid]:
+              # search for the element in array from index 0 to 
+              # index mid-1
+                high = mid - 1
+             
+            # if the element is greater than the middle 
+            # element,look for the element in second part.
+            else:
+            # search for the element in array from index mid+1 to 
+            # last index
+                low = mid + 1
+                 
+    # if the element is found, get out of the loop and print the 
+    # index
+    if (if_found == True) :
+       return({'mid': mid , 'list': liste})
+    # if element is not in the array, run the below code
+    else:
+        return("Element {} Not found".format(element) , liste)
+     
 
 
 

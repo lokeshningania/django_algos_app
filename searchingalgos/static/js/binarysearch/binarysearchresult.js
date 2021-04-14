@@ -1,6 +1,6 @@
 
 /* Array to perform search on */
-const data = [34  ,32  ,56  ,45  ,36  ,90  ,23  ,12  ,98  ,27  ,75  ,16,  19  ,31 , 11  ,18  ,14  ,29  ,63]
+const data = [1 , 4, 8 , 9 , 14 , 19 , 23 , 26 ,28 , 34 , 40 , 44 , 47 , 56 , 62 , 65 , 89 , 96 ]
 
 /* for loop to create div element for each element of array */
 for (i = 0; i < data.length; i++) { 
@@ -33,59 +33,44 @@ for (i = 0; i < data.length; i++) {
 /* to get the value of index number of the searched element */
 var searchval = parseInt(document.getElementById('binarysearchval').innerHTML)
 
+var array = JSON.parse(document.getElementById('list').innerHTML)
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BINARY SEARCH ALGORITHM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+var binindex = parseInt(document.getElementById('index').innerHTML)
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~loop for colour changing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-/*
-function binarysearch(arr , x , end , start) {
+for (i=0 ; i< array.length; i++){
 
-    if (end >= start){
-        mid = start + (end - 1)/2
-
-        if (arr[mid] == x){
-            return mid;
-        }
-
-        else if(arr[mid] > x){
-            return binarysearch(arr , x , mid-1 , start);
-        }
-
-        else{
-            return binarysearch(arr, x, mid+1, end)
-        }
-    }
-
-    else{
-        return -1
-    }
-
-}*/
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    task(i);
+  
+}
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~COLOUR VISUALS ANIMATION FUNCTION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
  
   function task(i) {
     setTimeout(function() {
-      var indexcolor = document.getElementById(`arr${i}`)
-      indexcolor.style.backgroundColor = 'red'
-      var previndex = document.getElementById(`arr${i-1}`)
-      previndex.style.backgroundColor = 'rgba(253,187,45,1)'
+     
+
+
+      var leftcolor = document.getElementById(`arr${array[i][0]}`)
+      leftcolor.style.backgroundColor = 'teal'
+      leftcolor.style.height = '120px'
+      var midcolor = document.getElementById(`arr${array[i][1]}`)
+      midcolor.style.backgroundColor = 'red'
       
-      if (i == data.length-1 && searchval != data[i]){
-        document.getElementById(`arr${i}`).style.backgroundColor = 'rgba(253,187,45,1)'
-        document.getElementById("emoji").innerHTML = '&#128557'
+      var rightcolor = document.getElementById(`arr${array[i][2]}`)
+      rightcolor.style.backgroundColor = 'brown'
+      rightcolor.style.height = '120px'
+
+      if(array[i][1] == binindex){
+        midcolor.style.backgroundColor = 'green'
+        midcolor.style.height = '90px'
+
       }
-
-      if(i == index){
-        indexcolor.style.backgroundColor = 'green'
-        pos.style.visibility = 'visible'
-
-      }
-
       
-    }, 500 * i+1);
+    }, 2000 * i+1);
   }
 
   
