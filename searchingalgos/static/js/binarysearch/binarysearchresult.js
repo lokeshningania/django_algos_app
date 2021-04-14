@@ -1,6 +1,6 @@
 
 /* Array to perform search on */
-const data = [1 , 4, 8 , 9 , 14 , 19 , 23 , 26 ,28 , 34 , 40 , 44 , 47 , 56 , 62 , 65 , 89 , 96 ]
+const data = [1 , 4, 8 , 9 , 14 , 19 , 23 , 26 ,28 , 34 , 40 , 44 , 47 , 56 , 62 , 65 , 89 , 96 , 101 ]
 
 /* for loop to create div element for each element of array */
 for (i = 0; i < data.length; i++) { 
@@ -30,12 +30,14 @@ for (i = 0; i < data.length; i++) {
   }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   
-/* to get the value of index number of the searched element */
+/* to get the value of index number and searched element and list of index iterated */
 var searchval = parseInt(document.getElementById('binarysearchval').innerHTML)
 
 var array = JSON.parse(document.getElementById('list').innerHTML)
 
 var binindex = parseInt(document.getElementById('index').innerHTML)
+
+document.getElementById('searchval').innerHTML = `${searchval}`
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~loop for colour changing~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 for (i=0 ; i< array.length; i++){
@@ -51,22 +53,47 @@ for (i=0 ; i< array.length; i++){
  
   function task(i) {
     setTimeout(function() {
-     
+      /* ~~~~~~~~~~~~~~~~~~~~~~~~~Colours of prev positions changed to normal~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+      if(i>0){
 
+        var pleftcolor = document.getElementById(`arr${array[i-1][0]}`)
+        pleftcolor.style.backgroundColor = "rgba(253,187,45,1)"
+        pleftcolor.style.height = '90px'
+        var pmidcolor = document.getElementById(`arr${array[i-1][1]}`)
+        pmidcolor.style.backgroundColor = "rgba(253,187,45,1)"
+        pmidcolor.style.height = '90px'
+        var prightcolor = document.getElementById(`arr${array[i-1][2]}`)
+        prightcolor.style.backgroundColor = "rgba(253,187,45,1)"
+        prightcolor.style.height = '90px'
+     }
+     /* ~~~~~~~~~~~~~~~~~~~~~~~~~change color according to mid left and right~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
       var leftcolor = document.getElementById(`arr${array[i][0]}`)
       leftcolor.style.backgroundColor = 'teal'
-      leftcolor.style.height = '120px'
+      leftcolor.style.height = '140px'
       var midcolor = document.getElementById(`arr${array[i][1]}`)
       midcolor.style.backgroundColor = 'red'
+      document.getElementById('midvalp').innerHTML = `${data[array[i][1]]}`
+      
+      if(data[array[i][1]] > searchval){
+        document.getElementById('midvsign').innerHTML = ' > '
+        
+      }
+      if(data[array[i][1]] < searchval){
+        document.getElementById('midvsign').innerHTML = ' < '
+      }
+
+      
       
       var rightcolor = document.getElementById(`arr${array[i][2]}`)
       rightcolor.style.backgroundColor = 'brown'
-      rightcolor.style.height = '120px'
-
+      rightcolor.style.height = '140px'
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~if value found color change to green~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
       if(array[i][1] == binindex){
         midcolor.style.backgroundColor = 'green'
         midcolor.style.height = '90px'
+        document.getElementById('midvsign').innerHTML = ' = '
+        
 
       }
       

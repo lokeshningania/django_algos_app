@@ -19,7 +19,7 @@ def binarysearch(request):
 
 
 def performbinarysearch(request):
-    arr = [1 , 4, 8 , 9 , 14 , 19 , 23 , 26 ,28 , 34 , 40 , 44 , 47 , 56 , 62 , 65 , 89 , 96 ]
+    arr = [1 , 4, 8 , 9 , 14 , 19 , 23 , 26 ,28 , 34 , 40 , 44 , 47 , 56 , 62 , 65 , 89 , 96 , 101 ]
     x = request.GET.get('binarysearchval' , 'default')
     x = int(x)
     result = binarySearch(arr, x)
