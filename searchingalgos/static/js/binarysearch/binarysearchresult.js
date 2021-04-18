@@ -69,8 +69,7 @@ for (i=0 ; i< array.length; i++){
      /* ~~~~~~~~~~~~~~~~~~~~~~~~~change color according to mid left and right~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
       var leftcolor = document.getElementById(`arr${array[i][0]}`)
-      leftcolor.style.backgroundColor = 'teal'
-      leftcolor.style.height = '140px'
+      leftcolor.style.backgroundColor = 'white'
       var midcolor = document.getElementById(`arr${array[i][1]}`)
       midcolor.style.backgroundColor = 'red'
       document.getElementById('midvalp').innerHTML = `${data[array[i][1]]}`
@@ -86,8 +85,8 @@ for (i=0 ; i< array.length; i++){
       
       
       var rightcolor = document.getElementById(`arr${array[i][2]}`)
-      rightcolor.style.backgroundColor = 'brown'
-      rightcolor.style.height = '140px'
+      rightcolor.style.backgroundColor = 'black'
+      rightcolor.style.color = 'white'
     /* ~~~~~~~~~~~~~~~~~~~~~~~~~if value found color change to green~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
       if(array[i][1] == binindex){
         midcolor.style.backgroundColor = 'green'
@@ -97,7 +96,7 @@ for (i=0 ; i< array.length; i++){
 
       }
       
-    }, 2000 * i+1);
+    }, 5000 * i+1);
   }
 
   

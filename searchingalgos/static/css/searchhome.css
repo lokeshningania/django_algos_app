@@ -9,12 +9,16 @@ html{
 
 .linkcard{
     padding: 20px;
-    border: 0.5rem solid rgba(253,187,45,1);
+    border: 0.5rem solid white;
     background-color:rgba(34,193,195,1);
     height: 50px;
     width: 90%;
-    border-radius: 2rem;
+    
     text-align: center;
+}
+
+.linkcard:hover{
+    background-color: white;
 }
 
 .links{
