@@ -3,20 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def home(request):
-    return render(request , 'home.html')
-
-def ds(request):
-    return render(request , 'datastructure.html' )
-
-def algos(request):
     return render(request , 'algos.html')
-
-def datastructure(request):
-    return render(request , 'datastructure.html')
-    
-def countdown(request):
-    return render(request , 'countdown.html')
-
 
 def submit(request):
     mytext = request.GET.get('text' , 'default')

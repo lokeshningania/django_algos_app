@@ -7,35 +7,29 @@
     <title>Document</title>
     {% load static %}
     <link rel="stylesheet" href="{% static '/css/searchhome.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
 </head>
 <body>
     <div class="container">
 
-        <div class="linksdiv">
-            <div class="linkcard">
-                <a class="links" href="linear">Linear Search</a>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="linkcard col-sm-4 shadow-lg p-3 mb-5 bg-body rounded">
+                <a class="links" href="linear"><h1>Linear Search</h1><p>In computer science, a linear search or sequential search is a method for finding an element within a list. It sequentially checks each element of the list until a match is found or the whole list has been searched. A linear search runs in at worst linear time and makes at most n comparisons, where n is the length of the list.</p></a>
             </div> 
-
-            <div class="linkcard">
-                <a class="links" href="binary">Binary search</a>
+            <div class="col-sm-2"></div>
+            <div class="linkcard col-sm-4 shadow-lg p-3 mb-5 bg-body rounded">
+                <a class="links " href="binary">
+                    <h1>Binary search</h1>
+                    <p>In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array.</p>
+                </a>
             </div> 
-
-            <div class="linkcard">
-                <a class="links" href="linear">Exponential Search</a>
-            </div> 
-
-            <div class="linkcard">
-                <a class="links" href="binary">Interpolation Search</a>
-            </div> 
-
-            <div class="linkcard">
-                <a class="links" href="linear">Jump Search</a>
-            </div> 
-
-            <div class="linkcard">
-                <a class="links" href="binary">Ternary Search</a>
-            </div> 
+            <div class="col-sm-1"></div>
         </div>
+        
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

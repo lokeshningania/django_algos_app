@@ -1,7 +1,4 @@
-body{
-    
-    background-color: rgba(34,193,195,1);
-}
+
 html{
     font-size: 16px;
    
@@ -9,7 +6,7 @@ html{
 .details{
     text-align: center;
     height: 90vh;
-    border: 1rem solid white;
+
     
 }
 
@@ -69,5 +66,5 @@ html{
 }
 
 .emoji{
-    font-size: 200px;
+    font-size: 40px;
 }

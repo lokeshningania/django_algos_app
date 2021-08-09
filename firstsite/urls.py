@@ -19,23 +19,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('countdown' , views.countdown , name = 'countdown'),
     path('' , views.home , name = 'home'),
-    path('algos', views.algos, name = 'algos'),
-    path('submit' , views.submit , name = 'submit'),
-    path('arrays/' , include('arrays.urls')),
-    path('ds/' , views.ds , name = 'ds'),
-    path('geometry/' , include('geometricalgos.urls')),
-    path('maths/' , include('mathematicalalgos.urls')),
-    path('backtrack/' , include('backtracking.urls')),
-    path('bit/' , include('bitalgos.urls')),
-    path('branchandbound/' , include('branchandbound.urls')),
-    path('greedy/' , include('greedyalgos.urls')),
-    path('sort/' , include('sortingalgos.urls')),
     path('search/' , include('searchingalgos.urls')),
-    path('divcon/' , include('divideandconquer.urls')),
-    path('pattern/' , include('patternsearchingalgos.urls')),
-    path('dynamic/' , include('dynamicprogramming.urls')),
-    path('randomised/' , include('randomizedalgos.urls')),
-    path('graph/' , include('graphalgos.urls')),
+    
 ]

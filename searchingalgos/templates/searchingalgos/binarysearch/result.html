@@ -7,8 +7,25 @@
     <title>Binary Search Result</title>
     {% load static %}
     <link rel="stylesheet" href="{% static '/css/binarysearch.css' %}">
+    
 </head>
 <body>
+<div class="indicators">
+    <div class="indicator">
+        <div class='color' id="bluecolor"><p>This color indicates start of the list</p></div>
+    </div>
+    <div class="indicator">
+        <div class='color' id="redcolor"><p>This color indicates mid when searched element not equal to mid</p></div>
+    </div>
+    <div class="indicator">
+        <div class='color' id="blackcolor"><p>This color indicates end of the list</p></div>
+        
+        
+    </div>
+    <div class="indicator">
+        <div class='color' id="greencolor"><p>This color indicates searched element is found</p></div> 
+    </div>
+</div>
     <div class="details">
         <p hidden id="binarysearchval">{{binarysearchvalue}}</p>
         <p  id="list">{{list}}</p>
@@ -29,7 +46,6 @@
         
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="{% static '/js/binarysearch/binarysearchresult.js' %}"></script>
 </body>
 </html>

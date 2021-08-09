@@ -38,7 +38,7 @@ var searchval = parseInt(document.getElementById('searchval').innerHTML)
     if(index == 0){
       document.getElementById(`arr${i}`).style.backgroundColor = 'green'
       pos.style.visibility = 'visible'
-      document.getElementById("emoji").innerHTML = '&#128557'
+      document.getElementById("emoji").innerHTML = 'Element not found ! This is Worst case  &#128557'
       break
     }
     task(i);
@@ -55,7 +55,7 @@ var searchval = parseInt(document.getElementById('searchval').innerHTML)
       
       if (i == data.length-1 && searchval != data[i]){
         document.getElementById(`arr${i}`).style.backgroundColor = 'rgba(253,187,45,1)'
-        document.getElementById("emoji").innerHTML = '&#128557'
+        document.getElementById("emoji").innerHTML = ' Element not found ! This is Worst case &#128557'
       }
 
       if(i == index){

@@ -69,7 +69,7 @@ for (i=0 ; i< array.length; i++){
      /* ~~~~~~~~~~~~~~~~~~~~~~~~~change color according to mid left and right~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
       var leftcolor = document.getElementById(`arr${array[i][0]}`)
-      leftcolor.style.backgroundColor = 'white'
+      leftcolor.style.backgroundColor = 'blue'
       var midcolor = document.getElementById(`arr${array[i][1]}`)
       midcolor.style.backgroundColor = 'red'
       document.getElementById('midvalp').innerHTML = `${data[array[i][1]]}`

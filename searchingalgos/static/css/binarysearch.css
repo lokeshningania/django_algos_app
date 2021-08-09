@@ -1,8 +1,7 @@
-body{
-    
-    background-color: rgba(34,193,195,1);
-    
-}
+
+
+
+
 html{
     font-size: 16px;
    
@@ -10,15 +9,32 @@ html{
 .details{
     text-align: center;
     height: 90vh;
-    border: 1rem solid white;
+    
    
     
     
     
 }
 
+.color{
+    height: 40px;
+    width: 25%;
+    color: white;
+}
+#bluecolor{
+    background-color: blue;
+    color: white;
+}
 
-
+#blackcolor{
+    background-color: black;
+}
+#redcolor{
+    background-color: red;
+}
+#greencolor{
+    background-color: green;
+}
 
 #main{
     text-align: center;
